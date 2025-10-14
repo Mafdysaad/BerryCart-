@@ -3,7 +3,7 @@ import 'package:ecommerce/core/class/statusrequst.dart';
 import 'package:ecommerce/core/constant/Approutes.dart';
 import 'package:ecommerce/core/function/handlingdata.dart';
 import 'package:ecommerce/data/datasource/remote_data/resetpassword/checke_otp.dart';
-import 'package:flutter/material.dart';
+
 import 'package:get/get.dart';
 
 abstract class Otp_controller extends GetxController {

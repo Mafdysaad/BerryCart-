@@ -1,11 +1,10 @@
 import 'package:ecommerce/controller/reset_password/check_email_controller.dart';
-import 'package:ecommerce/controller/reset_password/resatpassword_controller.dart';
+
 import 'package:ecommerce/core/class/handling_data_view.dart';
 import 'package:ecommerce/core/function/validinput.dart';
 import 'package:ecommerce/view/widget/auth/custombutton.dart';
 import 'package:ecommerce/view/widget/auth/customform.dart';
 
-import 'package:ecommerce/view/widget/auth/customformpassword.dart';
 import 'package:ecommerce/view/widget/auth/resatepassword/customhead.dart';
 import 'package:ecommerce/view/widget/auth/resatepassword/custompragraph.dart';
 
@@ -17,7 +16,6 @@ class Send_otp extends StatelessWidget {
   const Send_otp({super.key});
   @override
   Widget build(BuildContext context) {
-    Get.put(Implament_Check_controller());
     return Scaffold(
         appBar: AppBar(
           title: Text('19'.tr),

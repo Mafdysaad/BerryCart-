@@ -2,7 +2,7 @@ import 'package:ecommerce/controller/auth_controller/singup_controller.dart';
 import 'package:ecommerce/core/constant/lottieasset.dart';
 import 'package:ecommerce/view/widget/auth/custombutton.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 
@@ -11,7 +11,6 @@ class Success_singup extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Get.put(implament_singup_controler());
     return Scaffold(
         appBar: AppBar(
           title: Text('27'.tr),

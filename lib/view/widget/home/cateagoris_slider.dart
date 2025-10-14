@@ -11,18 +11,19 @@ class Cateagoris_Slider extends GetView<implament_Homepagecontroller> {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-        height: 180,
-        child: ListView.builder(
-          scrollDirection: Axis.horizontal,
-          itemCount: controller.categories.length,
-          itemBuilder: (context, index) => Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 5),
-              child: Cateagoris(
-                categoriesModels:
-                    CategoriesModels.fromJson(controller.categories[index]),
-              )),
-        ));
+    return GetBuilder<implament_Homepagecontroller>(
+      builder: (controller) => SizedBox(
+          height: 180,
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: controller.categories.length,
+            itemBuilder: (context, index) => Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 5),
+                child: Cateagoris(
+                  categoriesModels: controller.categories[index],
+                )),
+          )),
+    );
   }
 }
 
@@ -39,10 +40,13 @@ class Cateagoris extends StatelessWidget {
           height: 100,
           decoration: BoxDecoration(
               color: const Color.fromARGB(179, 203, 200, 200),
-              borderRadius: BorderRadius.circular(20)),
-          child: SvgPicture.network(
-            "${Linkapi.Image_location}${categoriesModels.categoriesImage}",
-            fit: BoxFit.contain,
+              shape: BoxShape.circle),
+          child: Padding(
+            padding: const EdgeInsets.all(15),
+            child: SvgPicture.network(
+              "${Linkapi.Image_location}${categoriesModels.categoriesImage}",
+              fit: BoxFit.contain,
+            ),
           ),
         ),
         Expanded(

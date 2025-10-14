@@ -1,19 +1,41 @@
-import 'package:ecommerce/view/screen/homepage.dart';
+import 'package:ecommerce/view/screen/homescreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 abstract class HomescreenController extends GetxController {
-  Function changepage(int curantpage);
+  void changepage(int curantpage);
 }
 
 class Implament_hmescrenncontroller extends HomescreenController {
-  final int currentpag = 0;
+  int currentpag = 0;
+  Color color = Colors.white;
   List<Widget> pages = [
-    const Homepage(),
+    const Homescreen(),
+    const Center(child: Text('category')),
+    const SizedBox(),
+    const Center(child: Text('cart')),
+    const Center(child: Text('favorite')),
   ];
+  List<String> title = [
+    'Home',
+    'Category',
+    '',
+    'Cart',
+    'Favorite',
+  ];
+  List<IconData?> icon = [
+    Icons.home,
+    Icons.settings,
+    null,
+    Icons.shopping_cart,
+    Icons.favorite,
+  ];
+
   @override
-  Function changepage(int curantpage) {
-    // TODO: implement currentpage
-    throw UnimplementedError();
+  void changepage(int index) {
+    if (index != currentpag) {
+      currentpag = index;
+      update();
+    }
   }
 }

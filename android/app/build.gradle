@@ -25,7 +25,7 @@ if (flutterVersionName == null) {
 
 android {
     namespace "com.example.ecommerce"
-    compileSdkVersion 34
+    compileSdkVersion 35
     ndkVersion flutter.ndkVersion
 
     compileOptions {
@@ -46,10 +46,14 @@ android {
         applicationId "com.example.ecommerce"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
-        minSdkVersion 21
-        targetSdkVersion flutter.targetSdkVersion
-        versionCode flutterVersionCode.toInteger()
-        versionName flutterVersionName
+        minSdkVersion 23
+        targetSdkVersion 35
+        versionCode 1
+        versionName "1.0"
+    }
+
+      kotlinOptions {
+        jvmTarget = '1.8'
     }
 
     buildTypes {
@@ -59,6 +63,16 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+    compileOptions {
+    coreLibraryDesugaringEnabled true
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+    jvmTarget = '1.8'
+    }
+
+    
 }
 
 flutter {
@@ -67,4 +81,9 @@ flutter {
 
 dependencies {
     implementation platform('com.google.firebase:firebase-bom:33.1.2')
+    dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.1.4"
+}
+
 }

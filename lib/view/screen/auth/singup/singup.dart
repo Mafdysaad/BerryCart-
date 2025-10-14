@@ -1,37 +1,22 @@
-import 'dart:math';
-
-import 'package:country_code_text_field/country_code_text_field.dart';
-import 'package:country_code_text_field/phone_number.dart';
-import 'package:ecommerce/controller/auth_controller/login_controller.dart';
 import 'package:ecommerce/controller/auth_controller/singup_controller.dart';
 import 'package:ecommerce/core/class/handling_data_view.dart';
-import 'package:ecommerce/core/class/statusrequst.dart';
-import 'package:ecommerce/core/constant/lottieasset.dart';
+
 import 'package:ecommerce/core/function/validinput.dart';
 import 'package:ecommerce/view/widget/auth/cuntrycod_textfiled.dart';
 import 'package:ecommerce/view/widget/auth/customform.dart';
 import 'package:ecommerce/view/widget/auth/customformpassword.dart';
-import 'package:ecommerce/view/widget/auth/customlogo.dart';
-import 'package:ecommerce/view/widget/auth/customoption.dart';
-import 'package:ecommerce/view/widget/auth/customsprator.dart';
 
-import 'package:ecommerce/view/widget/auth/custonsinup.dart';
 import 'package:ecommerce/view/widget/singup/Logo_sinup.dart';
 import 'package:ecommerce/view/widget/singup/custombutton.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import 'package:get/get.dart';
-import 'package:lottie/lottie.dart';
-
-import '../../../widget/auth/custombutton.dart';
 
 class Singup extends StatelessWidget {
   const Singup({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Get.put(implament_singup_controler());
     return Scaffold(
         appBar: AppBar(
           title: Text('16'.tr),

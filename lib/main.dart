@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       theme: lancontroller.appthem,
       home: const Languge(),
       getPages: pages,
-      initialBinding: Mybinding(),
+      // initialBinding: Mybinding(),
       initialRoute: '',
     );
   }

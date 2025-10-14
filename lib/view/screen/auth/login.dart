@@ -1,6 +1,6 @@
 import 'package:ecommerce/controller/auth_controller/login_controller.dart';
 import 'package:ecommerce/core/class/handling_data_view.dart';
-import 'package:ecommerce/core/class/statusrequst.dart';
+
 import 'package:ecommerce/core/function/validinput.dart';
 
 import 'package:ecommerce/view/widget/auth/customform.dart';
@@ -22,7 +22,6 @@ class Login extends StatelessWidget {
   const Login({super.key});
   @override
   Widget build(BuildContext context) {
-    Get.put(Implament_login_controler());
     return Scaffold(
         appBar: AppBar(
           title: Text('12'.tr),

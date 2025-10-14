@@ -12,17 +12,19 @@ class ItemsOffers extends GetView<implament_Homepagecontroller> {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 130,
-      child: ListView.builder(
-          scrollDirection: Axis.horizontal,
-          itemCount: controller.descont.length,
-          itemBuilder: (context, index) => Padding(
-                padding: const EdgeInsets.all(10),
-                child: items(
-                    Items_model:
-                        items_model.fromJson(controller.descont[index])),
-              )),
+    return GetBuilder<implament_Homepagecontroller>(
+      builder: (controller) => SizedBox(
+        height: 130,
+        child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: controller.descont.length,
+            itemBuilder: (context, index) => Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: items(
+                      Items_model:
+                          items_model.fromJson(controller.descont[index])),
+                )),
+      ),
     );
   }
 }
@@ -43,9 +45,12 @@ class items extends StatelessWidget {
             decoration: BoxDecoration(
                 color: const Color.fromARGB(179, 203, 200, 200),
                 borderRadius: BorderRadius.circular(20)),
-            child: Image.network(
-              "${Linkapi.Image_location}${Items_model.itemsImage}",
-              fit: BoxFit.contain,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10),
+              child: Image.network(
+                "${Linkapi.Image_location}${Items_model.itemsImage}",
+                fit: BoxFit.contain,
+              ),
             ),
           ),
         ]),

@@ -2,8 +2,9 @@ import 'package:ecommerce/core/class/crud.dart';
 import 'package:ecommerce/core/class/statusrequst.dart';
 import 'package:ecommerce/core/function/handlingdata.dart';
 import 'package:ecommerce/data/datasource/remote_data/Homepagedata.dart';
-import 'package:ecommerce/data/datasource/remote_data/test_data.dart';
-import 'package:ecommerce/view/screen/homepage.dart';
+
+import 'package:ecommerce/data/modle/categoriesmodel.dart';
+
 import 'package:get/get.dart';
 
 abstract class HomepageController extends GetxController {
@@ -11,21 +12,23 @@ abstract class HomepageController extends GetxController {
   String? email;
   Statusrequst statusrequst = Statusrequst.none;
   Homepagedata homepagedata = Homepagedata(Get.put(crud()));
-  List categories = [];
+  List<CategoriesModels> categories = [];
   List descont = [];
 }
 
 class implament_Homepagecontroller extends HomepageController {
   @override
   Data_categories() async {
-    var respons = await homepagedata.getdata();
+    Map<String, dynamic> respons = await homepagedata.getdata();
     statusrequst = handlingdata(respons);
     update();
     if (statusrequst == Statusrequst.success) {
       if (respons['status'] == 'success') {
-        categories.addAll(respons['categories']);
+        for (var i in respons['categories']) {
+          categories.add(CategoriesModels.fromJson(i));
+        }
         descont.addAll(respons["items"]);
-      } else {}
+      }
       update();
     }
   }
@@ -33,6 +36,7 @@ class implament_Homepagecontroller extends HomepageController {
   @override
   void onInit() {
     Data_categories();
+
     super.onInit();
   }
 }

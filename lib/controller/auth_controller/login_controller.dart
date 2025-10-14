@@ -28,7 +28,9 @@ class Implament_login_controler extends Login_controll {
   Myservices myservices = Get.find();
   @override
   gotosingpage() {
-    Get.toNamed(Approutes.singup);
+    Get.toNamed(
+      Approutes.singup,
+    );
   }
 
   @override

@@ -1,10 +1,8 @@
-import 'package:ecommerce/controller/auth_controller/login_controller.dart';
-
 import 'package:ecommerce/controller/reset_password/resatpassword_controller.dart';
 import 'package:ecommerce/core/class/handling_data_view.dart';
 import 'package:ecommerce/view/widget/auth/custombutton.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:get/get.dart';
 
 class Success_resatpassword extends StatelessWidget {
@@ -12,7 +10,6 @@ class Success_resatpassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Get.put(Implament_Resatepassword());
     return Scaffold(
         appBar: AppBar(
           title: Text('31'.tr),

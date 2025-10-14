@@ -1,9 +1,6 @@
 import 'package:ecommerce/controller/reset_password/otp_controller.dart';
 import 'package:ecommerce/core/class/handling_data_view.dart';
 
-import 'package:ecommerce/core/constant/customoutlineInput.dart';
-import 'package:ecommerce/view/widget/auth/custombutton.dart';
-
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:ecommerce/view/widget/auth/resatepassword/customhead.dart';
 import 'package:ecommerce/view/widget/auth/resatepassword/custompragraph.dart';
@@ -17,7 +14,6 @@ class Otp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Get.put(Implament_Otp_controller());
     return Scaffold(
         appBar: AppBar(
           title: Text('22'.tr),

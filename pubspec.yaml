@@ -28,75 +28,60 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  auto_animated: 
+  badges: 
+  cached_network_image: 
+  cloud_firestore: 
+  country_code_text_field: 
+  cupertino_icons: 
+  dartz: 
+  device_preview: 
+  dropdown_search: 
+  firebase_core: 
+  firebase_messaging: 
   flutter:
     sdk: flutter
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
-  get: ^4.6.6
-  # Date Time
-  jiffy: ^6.3.0
-  intl: ^0.18.1
-  http: ^1.2.1
-  # Images
-  cached_network_image: ^3.3.1
-  image_picker: ^1.0.8
-  # Animate
-  show_up_animation: ^2.0.0
-  auto_animated: ^3.2.0
-  # Google Map
-  flutter_polyline_points: ^2.0.0
-  google_maps_flutter: ^2.6.0
-  geolocator: ^11.0.0
-  geocoding: ^3.0.0
-  # Firebase And Notification
-  firebase_messaging: ^14.8.1
-  firebase_core: ^2.29.0
-  flutter_local_notifications: ^17.0.0
-  cloud_firestore: ^4.16.1
-  # Local Data Cache
-  sqflite: ^2.3.3
-  shared_preferences: ^2.2.3
-  path: ^1.9.0
-  # Qrcode
-  qr_flutter: ^4.1.0
-  scan: ^1.6.0
-  grouped_list: ^5.1.2
-  url_launcher: ^6.2.6
-  dropdown_search: ^5.0.6
-  badges: ^3.1.2
-  # Icon
-  flutter_svg: ^2.0.10+1
-  font_awesome_flutter: ^10.7.0
-  fluttericon: ^2.0.0
-  dartz: ^0.10.1
-  # Google Auth
-  google_sign_in: ^6.2.1
-  device_preview: ^1.1.0
-  responsive_builder: ^0.7.0
-  image_pickers: ^2.0.4+10
-  flutter_otp_text_field: ^1.1.3+2
-  country_code_text_field: ^1.1.2
-  lottie: ^3.1.2
+  flutter_local_notifications: 
+  flutter_otp_text_field: 
+  flutter_polyline_points: 
+  flutter_svg: 
+  fluttericon: 
+  font_awesome_flutter: 
+  geocoding: 
+  geolocator: 
+  get: 
+  google_maps_flutter: 
+  google_sign_in: 
+  grouped_list: 
+  http: 
+  image_pickers: 
+  intl: 
+  jiffy: 
+  lottie: 
+  path: 
+  qr_flutter: 
+  responsive_builder: 
+  shared_preferences: 
+  show_up_animation: 
+  sqflite: 
+  url_launcher: 
 
 dependency_overrides:
-  intl:
+  ? intl
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^2.0.0
+  flutter_lints: ^6.0.0
+  flutter_test:
+    sdk: flutter
   test: ^1.24.9
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
-
 # The following section is specific to Flutter packages.
 flutter:
   # The following line ensures that the Material Icons font is
@@ -109,13 +94,10 @@ flutter:
     - assets/images/
     - assets/lottie/
   #   - images/a_dot_ham.jpeg
-
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
-
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/assets-and-images/#from-packages
-
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
   # "family" key with the font family name, and a "fonts" key with a
