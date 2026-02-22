@@ -8,7 +8,8 @@ import 'package:ecommerce/data/modle/categoriesmodel.dart';
 import 'package:get/get.dart';
 
 abstract class HomepageController extends GetxController {
-  Data_categories();
+  void datacategories();
+
   String? email;
   Statusrequst statusrequst = Statusrequst.none;
   Homepagedata homepagedata = Homepagedata(Get.put(crud()));
@@ -18,7 +19,7 @@ abstract class HomepageController extends GetxController {
 
 class implament_Homepagecontroller extends HomepageController {
   @override
-  Data_categories() async {
+  datacategories() async {
     Map<String, dynamic> respons = await homepagedata.getdata();
     statusrequst = handlingdata(respons);
     update();
@@ -35,7 +36,7 @@ class implament_Homepagecontroller extends HomepageController {
 
   @override
   void onInit() {
-    Data_categories();
+    datacategories();
 
     super.onInit();
   }

@@ -8,8 +8,7 @@ import 'package:ecommerce/bindings/sendotpbinding.dart';
 import 'package:ecommerce/bindings/singupbinding.dart';
 import 'package:ecommerce/bindings/successresatpasswordbinding.dart';
 import 'package:ecommerce/core/constant/Approutes.dart';
-import 'package:ecommerce/core/constant/binding.dart';
-import 'package:ecommerce/core/middleware/mymiddleware.dart';
+
 import 'package:ecommerce/view/screen/auth/resatpassword/send_otp.dart';
 import 'package:ecommerce/view/screen/auth/login.dart';
 import 'package:ecommerce/view/screen/auth/resatpassword/otp.dart';
@@ -27,10 +26,10 @@ import 'package:get/get.dart';
 
 List<GetPage<dynamic>>? pages = [
   GetPage(
-    name: '/',
-    page: () => Languge(),
-    // middlewares: [mymiddleware()],
-  ),
+      name: '/',
+      page: () => Homepage(),
+      // middlewares: [mymiddleware()],
+      binding: Homebinding()),
   // page: () => const Languge(),
   GetPage(
       name: Approutes.login,
@@ -66,5 +65,7 @@ List<GetPage<dynamic>>? pages = [
       page: () => const Otp_singup(),
       binding: OtpSignupBinding()),
   GetPage(
-      name: Approutes.homepage, page: () => Homepage(), binding: Homebinding()),
+    name: Approutes.homepage,
+    page: () => Homepage(),
+  ),
 ];

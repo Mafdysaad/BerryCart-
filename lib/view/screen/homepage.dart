@@ -1,3 +1,4 @@
+import 'package:ecommerce/controller/Home_controller/homepage_controller.dart';
 import 'package:ecommerce/controller/Home_controller/homescreen_contriller.dart';
 import 'package:ecommerce/view/widget/home/custom_apper.dart';
 
@@ -51,7 +52,7 @@ class Homepage extends GetView<HomescreenController> {
             onpressdsearch: () {},
             onpressdnotification: () {},
           ),
-          body: controller.pages[controller.currentpag]),
+          body: controller.currentPageWidget),
     );
   }
 }

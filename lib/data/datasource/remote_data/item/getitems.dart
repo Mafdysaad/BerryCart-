@@ -1,17 +1,17 @@
 import 'package:dartz/dartz.dart';
 import 'package:ecommerce/core/class/crud.dart';
 import 'package:ecommerce/core/class/statusrequst.dart';
-import 'package:ecommerce/data/datasource/remote_data/test_data.dart';
+
 import 'package:ecommerce/view/widget/linkApi.dart';
-import 'package:get/get.dart';
 
-class Homepagedata {
-  crud Curd;
-  Homepagedata(this.Curd);
+class Getitems {
+  final crud curd;
+  const Getitems(this.curd);
 
-  getdata() async {
+  Future<Object> featchitems(String itemid) async {
     Either<Statusrequst, Map> respos =
-        await Curd.postdata(Linkapi.homepage, {});
+        await curd.postdata(Linkapi.items, {'item_id': itemid});
+
     return respos.fold((l) => l, (r) => r);
   }
 }
