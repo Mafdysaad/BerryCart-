@@ -1,16 +1,107 @@
-# ecommerce
+# 🛒 E-Commerce Mobile App
 
-A new Flutter project.
+A scalable and modern e-commerce mobile application built with Flutter, featuring product browsing, cart management, authentication, and backend integration using PHP & MySQL.
 
-## Getting Started
+# 🚀 Features
 
-This project is a starting point for a Flutter application.
+- 🔐 User Authentication
 
-A few resources to get you started if this is your first Flutter project:
+- 🛍 Browse Products by Categories
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- 🔎 Product Search
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- 🧾 Product Details Page
+
+- 🛒 Add to Cart
+
+- 🌍 Localization Support
+
+- 🏗 Clean Architecture Implementation
+
+- 🔗 REST API Integration
+
+# 🛠 Tech Stack
+📱 Frontend
+
+- Flutter
+
+- Clean Architecture
+
+- 
+State Management (Getx)
+
+- Localization
+
+🖥 Backend
+
+- PHP
+
+- MySQL
+
+- RESTful APIs
+
+# 🏗 Architecture
+
+The application follows MVC principles:
+
+- Controller Layer
+
+- Data Layer
+
+- View Layer
+
+This structure improves scalability, maintainability, and testability.
+
+# 📂 Project Structure
+```text
+lib/
+ ├── core/
+ ├── bindings
+ ├── features/
+ │    ├── auth/
+ │    ├── home/
+ │    ├── cart/
+ │    ├── product/
+ └── main.dart
+```
+# 📦 Installation & Setup
+1️⃣ Clone the Repository
+git clone https://github.com/Mafdysaad/BerryCart-.git
+cd ecommerce-app
+
+2️⃣ Install Dependencies
+flutter pub get
+
+3️⃣ Backend Setup
+
+- Install XAMPP or any Apache server
+
+- Import the provided database file into MySQL
+
+- Configure database credentials in config.php
+
+- Update API base URL inside the Flutter project
+
+4️⃣ Run the App
+flutter run
+# 🎯 Project Purpose
+
+- This project demonstrates:
+
+- Full mobile app development lifecycle
+
+- Backend integration
+
+- Authentication flow implementation
+
+- Clean Architecture usage
+
+- Localization support
+
+- API handling and error management
+## Screenshots
+<div style="display: flex; gap: 10px;">
+<img src="lib/screenshots/login.png" alt="Login Screen" width="200"/>
+<img src="lib/screenshots/onbording.png" alt="Home Screen" width="200"/>
+<img src="lib/screenshots/Screenshot_1759605915.png" alt="Chat Screen" width="200"/>
+</div>
